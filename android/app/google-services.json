@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319069116205",
+    "project_id": "sad-bot-30d1a",
+    "storage_bucket": "sad-bot-30d1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319069116205:android:1cdac850c866785db6e5a4",
+        "android_client_info": {
+          "package_name": "com.example.group_chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319069116205-sb3q0si9si8114bg6do7qvca2uedq5j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqQ7PSJ5_JCb4Oc2w1O0NX5RVVoOdb4u4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319069116205-sb3q0si9si8114bg6do7qvca2uedq5j8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
