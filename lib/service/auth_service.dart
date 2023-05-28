@@ -15,6 +15,7 @@ class AuthService {
       if (user != null) {
         return true;
       }
+      print('here');
     } on FirebaseAuthException catch (e) {
       return e.message;
     }

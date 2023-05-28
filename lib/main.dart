@@ -1,10 +1,14 @@
 import 'package:group_chat_app/helper/helper_function.dart';
 import 'package:group_chat_app/pages/auth/login_page.dart';
+import 'package:group_chat_app/pages/chat/providers/chat_provider.dart';
+import 'package:group_chat_app/pages/chat/screens/chat_screen.dart';
 import 'package:group_chat_app/pages/home_page.dart';
+import 'package:group_chat_app/pages/network_page.dart';
 import 'package:group_chat_app/shared/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -51,12 +55,19 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-          primaryColor: Constants().primaryColor,
-          scaffoldBackgroundColor: Colors.white),
-      debugShowCheckedModeBanner: false,
-      home: _isSignedIn ? const HomePage() : const LoginPage(),
+
+
+    return MultiProvider(
+      providers:[
+        ChangeNotifierProvider(create: (_)=>ChatProvider())
+      ],
+      child: MaterialApp(
+        theme: ThemeData(
+            primaryColor: Constants().primaryColor,
+            scaffoldBackgroundColor: Colors.white),
+        debugShowCheckedModeBanner: false,
+        home: _isSignedIn ? const NetworkPage() : const LoginPage(),
+      )
     );
   }
 }

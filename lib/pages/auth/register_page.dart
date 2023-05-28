@@ -2,7 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:group_chat_app/helper/helper_function.dart';
 import 'package:group_chat_app/pages/auth/login_page.dart';
+import 'package:group_chat_app/pages/chat/screens/chat_screen.dart';
 import 'package:group_chat_app/pages/home_page.dart';
+import 'package:group_chat_app/pages/network_page.dart';
 import 'package:group_chat_app/service/auth_service.dart';
 import 'package:group_chat_app/widgets/widgets.dart';
 
@@ -176,7 +178,8 @@ class _RegisterPageState extends State<RegisterPage> {
           await HelperFunctions.saveUserLoggedInStatus(true);
           await HelperFunctions.saveUserEmailSF(email);
           await HelperFunctions.saveUserNameSF(fullName);
-          nextScreenReplace(context, const HomePage());
+          // nextScreenReplace(context, const HomePage());
+          nextScreenReplace(context, const NetworkPage());
         } else {
           showSnackbar(context, Colors.red, value);
           setState(() {
