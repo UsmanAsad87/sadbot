@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:group_chat_app/helper/helper_function.dart';
+import 'package:group_chat_app/pages/auth/api.dart';
 import 'package:group_chat_app/pages/auth/register_page.dart';
 import 'package:group_chat_app/pages/chat/screens/chat_screen.dart';
 import 'package:group_chat_app/pages/home_page.dart';
@@ -10,6 +11,8 @@ import 'package:group_chat_app/pages/network_page.dart';
 import 'package:group_chat_app/service/auth_service.dart';
 import 'package:group_chat_app/service/database_service.dart';
 import 'package:group_chat_app/widgets/widgets.dart';
+
+import 'api2.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -114,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
                             onPressed: () {
-                              login();
+                              login2();
                             },
                           ),
                         ),
@@ -171,5 +174,13 @@ class _LoginPageState extends State<LoginPage> {
         }
       });
     }
+  }
+
+
+
+  login2() async {
+    YourClass().ask(Prompt('hey,usman asad'));
+    YourClass2().initConversation();
+
   }
 }
